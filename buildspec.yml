@@ -1,0 +1,15 @@
+version: 0.2
+
+phases:
+   install:
+     runtime-versions:
+       java: corretto8
+   build:
+     commands:
+       - echo Build started on 'date'
+       - mvn test
+       - mvn package
+       - echo Build completed on 'date'
+artifacts:
+   files:
+     - target/spring-petclinic-2.3.0.BUILD-SNAPSHOT.jar
